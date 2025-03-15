@@ -18,7 +18,7 @@ set(CMAKE_CUDA_ARCHITECTURES ${INSTALLED_GPU_CCS_3})
 
 # If auto-detection fails, fallback to common architectures
 if(NOT DEFINED CMAKE_CUDA_ARCHITECTURES OR "${CMAKE_CUDA_ARCHITECTURES}" STREQUAL "")
-    set(CMAKE_CUDA_ARCHITECTURES 60 70 75 80 86)
+    set(CMAKE_CUDA_ARCHITECTURES 75 80 86)
     message(STATUS "Could not auto-detect CUDA architecture, using default set: ${CMAKE_CUDA_ARCHITECTURES}")
 else()
     message(STATUS "Using detected CUDA architectures: ${CMAKE_CUDA_ARCHITECTURES}")
